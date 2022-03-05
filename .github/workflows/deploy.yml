@@ -5,7 +5,7 @@ name: MRP STORE WEB CI
 on: 
   push:
     branches:
-      - main
+      - master
       
 jobs:
   build: 
