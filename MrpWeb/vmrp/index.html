@@ -6,9 +6,12 @@
 <title id="title">VMRP中转</title>
 </head>
 <body>
+<center>
 跳转中...
+</center>
 <script>
-var vmrpLink = "https://mrp.magicblue.cn/mrp/main.html"
+var vmrpLinkCn = "https://mrp.magicblue.cn/mrp/main.html"
+var vmrpLink = "https://vmrp.gddhy.net/"
 var cdnLink = "https://fastly.jsdelivr.net/gh/gddhy/mrp-web";
 
 function getQueryString(name) {
@@ -39,7 +42,11 @@ if(window.location.href.includes("?")){
     if(title!=null){
         link = link + "&title=" + title;
     }
-    window.location.href = vmrpLink + link;
+    if(navigator.language==="zh-CN"){
+      window.location.href = vmrpLinkCn + link;
+    } else {
+      window.location.href = vmrpLink + link;
+    }
 } else {
     window.location.href = vmrpLink;
 }
