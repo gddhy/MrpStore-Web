@@ -42,11 +42,11 @@ if(window.location.href.includes("?")){
     if(title!=null){
         link = link + "&title=" + title;
     }
-    if(navigator.language==="zh-CN"){
-      window.location.href = vmrpLinkCn + link;
-    } else {
+    //if(navigator.language==="zh-CN"){
+    //  window.location.href = vmrpLinkCn + link;
+    //} else {
       window.location.href = vmrpLink + link;
-    }
+    //}
 } else {
     window.location.href = vmrpLink;
 }
