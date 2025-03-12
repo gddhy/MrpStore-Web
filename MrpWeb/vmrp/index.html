@@ -10,9 +10,9 @@
 跳转中...
 </center>
 <script>
-var vmrpLinkCn = "https://mrp.magicblue.cn/mrp/main.html"
-var vmrpLink = "https://vmrp.gddhy.net/"
-var cdnLink = "https://fastly.jsdelivr.net/gh/gddhy/mrp-web";
+var vmrpLinkCn = "http://vmrp.yzjlb.net/?isapp=1&scrw=240&scrh=320&showboard=1&f="
+var vmrpLink = "https://vmrp.gddhy.net/?f="
+var cdnLink = "https://gcore.jsdelivr.net/gh/gddhy/mrp-web";
 
 function getQueryString(name) {
   var url_string = window.location.href;
@@ -38,15 +38,15 @@ if(window.location.href.includes("?")){
     if(f.includes("/mrp-files/")){
         f = cdnLink + f;
     }
-    link = link + "f=" + f;
+    link = link + f;
     if(title!=null){
         link = link + "&title=" + title;
     }
-    //if(navigator.language==="zh-CN"){
-    //  window.location.href = vmrpLinkCn + link;
-    //} else {
+    if(navigator.language==="zh-CN"){
+      window.location.href = vmrpLinkCn + link;
+    } else {
       window.location.href = vmrpLink + link;
-    //}
+    }
 } else {
     window.location.href = vmrpLink;
 }
