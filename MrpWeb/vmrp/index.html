@@ -64,9 +64,13 @@
 
             return mobileFlag;
         }
+        
+        function isAndroid(){
+            return navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
+        }
 
         function jumpVMRP(file, scr) {
-            if (isMobile()) {
+            if (isAndroid()) {
                 //window.location.href = 'vmrp://' + file;
                 window.location.href = "vmrp://mrp/run?file=" + file + "&scr=" + scr;
                 setTimeout(function () {
