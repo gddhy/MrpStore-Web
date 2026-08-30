@@ -64,8 +64,8 @@
 
             return mobileFlag;
         }
-        
-        function isAndroid(){
+
+        function isAndroid() {
             return navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
         }
 
@@ -98,6 +98,13 @@
             var title = getQueryString("title");
             if (title != null) {
                 link = link + "&title=" + title;
+            }
+            var resFile = getQueryString("res");
+            if (resFile != null) {
+                if (resFile.includes("/mrp-files/")) {
+                    resFile = cdnLink + resFile;
+                }
+                link = link + "&res=" + resFile;
             }
 
             window.location.href = vmrpLink + link;
