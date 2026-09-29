@@ -1,0 +1,23 @@
+{
+  "name": "mrpstore-node",
+  "version": "1.0.0",
+  "description": "MRP下载站静态网页与API JSON构建工具（Node.js版，迁移自Java版）",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "node src/main.js",
+    "build:res": "node src/main.js ResSite=true",
+    "resapi": "node src/mrp-res-api.js"
+  },
+  "keywords": [
+    "mrp",
+    "static-site",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "iconv-lite": "^0.7.3",
+    "tiny-pinyin": "^1.3.2"
+  }
+}
